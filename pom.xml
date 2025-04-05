@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>hu.informula</groupId>
-    <artifactId>movie-deails</artifactId>
+    <artifactId>movie-details</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>movie-deails</name>
+    <name>movie-details</name>
     <description>Demo project for Spring Boot</description>
     <url/>
     <licenses>

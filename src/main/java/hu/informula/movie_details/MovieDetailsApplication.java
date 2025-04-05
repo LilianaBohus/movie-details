@@ -1,13 +1,13 @@
-package hu.informula.movie_deails;
+package hu.informula.movie_details;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieDeailsApplication {
+public class MovieDetailsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieDeailsApplication.class, args);
+		SpringApplication.run(MovieDetailsApplication.class, args);
 	}
 
 }
