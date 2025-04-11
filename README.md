@@ -1,10 +1,25 @@
-## Improvements I could add
-- Swagger/OpenAPI docs
-- Javadoc - altough I do believe good code is self-documenting (I made some minor comments where necessary)
-- switch to FeignClient for HTTP calls instead of RestTemplate
-- error/exception handling could be more polished!
-- rate limiting for API calls
-- using Lombok (I wasn't sure if the team uses it:))
-- DTO naming is not the cleanest right now, ~~I am very tired, no brainzzzZZzz~~
-- could have done more and seperable commits but it was a speedrun and I don't feel comfortable pushing non-working code, so I just squashed them
-- and probably many more
+## Movie Details
+A Spring Boot REST API that retrieves movie information from two external sources: OMDb and TMDb.
+It returns a unified JSON response containing movie title, release year, and list of directors.
+
+### Key Features
+- Unified API interface over two providers (OMDb / TMDb)
+- High-performance fetching using CompletableFuture and parallel page loading
+- Caching via Redis to reduce redundant external API calls
+- Search history persistence with MySQL + JPA
+- Automatic pagination handling across both APIs
+- Clean architecture with proper layering and modular design
+- Full unit testing with JUnit and Mockito
+- Docker support for easy setup and environment consistency
+- Modern Java features including records, streams, and functional patterns
+
+### Technologies Used
+
+- Java 17+
+- Spring Boot
+- Redis
+- MySQL
+- JPA / Hibernate
+- Maven
+- JUnit 5, Mockito
+- Docker / Docker Compose

@@ -3,6 +3,7 @@ package hu.informula.movie_details.service;
 import hu.informula.movie_details.client.OmdbClient;
 import hu.informula.movie_details.model.MovieDto;
 import hu.informula.movie_details.model.MovieResponse;
+import hu.informula.movie_details.model.enums.MovieApi;
 import hu.informula.movie_details.model.omdb.OmdbMovieDetailDto;
 import hu.informula.movie_details.model.paging.PageResult;
 import hu.informula.movie_details.util.PagingUtil;
@@ -49,6 +50,11 @@ public class OmdbService implements MovieService {
                 .collect(Collectors.toList());
 
         return new MovieResponse(movieDtos);
+    }
+
+    @Override
+    public boolean canHandle(MovieApi movieApi) {
+        return "omdb".equalsIgnoreCase(movieApi.name());
     }
 
     private MovieDto toMovieDto(OmdbMovieDetailDto result) {

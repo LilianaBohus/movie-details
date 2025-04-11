@@ -3,6 +3,7 @@ package hu.informula.movie_details.service;
 import hu.informula.movie_details.client.TmdbClient;
 import hu.informula.movie_details.model.MovieDto;
 import hu.informula.movie_details.model.MovieResponse;
+import hu.informula.movie_details.model.enums.MovieApi;
 import hu.informula.movie_details.model.paging.PageResult;
 import hu.informula.movie_details.util.PagingUtil;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,11 @@ public class TmdbService implements MovieService {
                 .collect(Collectors.toList());
 
         return new MovieResponse(movies);
+    }
+
+    @Override
+    public boolean canHandle(MovieApi movieApi) {
+        return "tmdb".equalsIgnoreCase(movieApi.name());
     }
 
 }
